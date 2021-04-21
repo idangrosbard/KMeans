@@ -3,4 +3,4 @@ project(KMeans C)
 
 set(CMAKE_C_STANDARD 90)
 
-add_executable(KMeans main.c)
+add_executable(KMeans main.c kmeans_algo.h)

@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Y/CLionProjects/KMeans/kmeans_algo.h">
+			<Option target="KMeans"/>
+		</Unit>
 		<Unit filename="C:/Users/Y/CLionProjects/KMeans/main.c">
 			<Option target="KMeans"/>
 		</Unit>
