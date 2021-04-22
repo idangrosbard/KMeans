@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/home/KMeans/kmeans_algo.h
+
+C:/home/KMeans/main.c
+stdio.h
+-
+kmeans_algo.h
+C:/home/KMeans/kmeans_algo.h
+string.h
+-
+stdlib.h
+-
+assert.h
+-
+math.h
+-
+
