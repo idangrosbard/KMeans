@@ -2,8 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/KMeans.dir/main.c.obj"
   "KMeans.exe"
   "KMeans.exe.manifest"
-  "KMeans.lib"
   "KMeans.pdb"
+  "libKMeans.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

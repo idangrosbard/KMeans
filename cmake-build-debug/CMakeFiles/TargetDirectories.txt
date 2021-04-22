@@ -1,3 +1,3 @@
-C:/Users/Y/CLionProjects/KMeans/cmake-build-debug/CMakeFiles/KMeans.dir
-C:/Users/Y/CLionProjects/KMeans/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Y/CLionProjects/KMeans/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/home/KMeans/cmake-build-debug/CMakeFiles/KMeans.dir
+C:/home/KMeans/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/home/KMeans/cmake-build-debug/CMakeFiles/rebuild_cache.dir

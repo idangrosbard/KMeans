@@ -13,12 +13,18 @@ double** load_dataset(char* path_to_datapoints);
 /*
  * gets a row from the file, and parses it as a double array point.
  */
-double* parse_datapoint(char* row);
+double* parse_datapoint(char* row ,int d);
 
 /*
  * gets the result k means and prints them to console
  */
+
 void print_means(double** kmeans, int k, int d);
+
+/*
+ * count how many commas in the row, and return d (num of commas +1)
+ */
+int calc_d(char* row);
 
 /*
  * Gets an array of [N,d] dims, and calculates the means.
