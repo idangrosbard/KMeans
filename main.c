@@ -2,6 +2,8 @@
 #include "kmeans_algo.h"
 #include <string.h>
 #include <stdlib.h>
+#include <assert.h>
+#include <math.h>
 
 int calc_d(char* row){
     // counts how many commas exists and return that number +1.
@@ -18,20 +20,35 @@ int calc_d(char* row){
 }
 
 double* parse_datapoint(char* row ,int d){
+    //Allocate space from OS and assert it
     double *point =calloc(d,sizeof (double ));
+    assert (point!=NULL);
     char *pointer;
     double number;
     int loc=0;
     char delim[] = ",";
+    //get the first number before comma
     pointer = strtok(row,delim);
     while (pointer!= NULL ){
+        //convert string to double
         number = atof(pointer);
         point [loc] = number;
+        // get the next string between commas.
         pointer = strtok(NULL,delim);
         loc ++;
     }
     return point;
 }
+
+double l2_dist(double* point1, double* point2, int d){
+    double sum = 0;
+    int i;
+    for (i=0;i<d;i++){
+        sum += pow((point1[i]-point2[i]),2);
+    }
+    return sum;
+}
+
 
 void print_array (double* point,int d){
     int i;
