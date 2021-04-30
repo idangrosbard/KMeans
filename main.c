@@ -4,6 +4,13 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <math.h>
+#include <stdio.h>
+
+double** load_dataset(char* path_to_datapoints) {
+    FILE * file_pointer;
+    file_pointer = fopen(path_to_datapoints, 'r');
+    
+}
 
 int calc_d(char* row){
     // counts how many commas exists and return that number +1.
