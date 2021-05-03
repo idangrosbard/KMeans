@@ -49,24 +49,26 @@ def print_points(points):
 
 #1st step: get input from command line
 args = sys.argv
-if len(args)==5:
-    file_path = args[4]
+if len(args)==3:
     k=int(args[1])
     max_iter = int(args[2])
-if len(args)==4:
+if len(args)==2:
     k=int(args[1])
     max_iter = 200
-    file_path=args[3]
 
-print (file_path)
+
 #2nd step: import file and make it a list of points stored in data
 
-f = open (file_path,"r")
+line = input()
 data = []
-for line in f:
+while line!= None:
     point_str = line[0:len(line)-1].split(',')
     point = [float(num) for num in point_str]
     data.append(point)
+    try:
+        line = input()
+    except EOFError:
+        line = None
 
 #3rd step: initailize centroids and calculate d
 centroids = [data[i].copy() for i in range(k)]
