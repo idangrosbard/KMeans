@@ -69,29 +69,6 @@ list* create_list() {
 }
 
 /*
- * A test function to check the list is working properly.
- * OK to delete.
- */
-void test_list() {
-    list* coordinates_list;
-    unsigned long i;
-    node* curr;
-    unsigned long* num;
-    coordinates_list = create_list();
-    for (i = 0; i <10; i++) {
-        num = malloc(sizeof(unsigned long));
-        *num = i;
-        add_to_list(coordinates_list, num);
-    }
-    curr = coordinates_list->first;
-    for (i=0; i < coordinates_list->len; i++) {
-        num =(unsigned long*)(curr->val);
-        printf("%ld\n", *num);
-        curr = curr->next;
-    }
-}
-
-/*
  * Deep copies a list
  */
 list* copy_list(list* lst) {
@@ -127,6 +104,8 @@ list* create_empty_list(unsigned long d) {
 
     return copy;
 }
+
+/* ------------- Free functions -------------- */
 
 /*
  * Free the list nodes and their values.
@@ -178,6 +157,9 @@ void free_points_list(list* points) {
     free(points);
 }
 
+/*
+ * Free an array of points (given as an array of lists)
+ */
 void free_points_array(list** points, int len) {
     int i;
     for (i = 0; i < len; i++) {
@@ -187,149 +169,11 @@ void free_points_array(list** points, int len) {
     free(points);
 }
 
-/* ---------------READ INPUT--------------- */
-
-
-list* parse_datapoint(char* datapoint_str) {
-    char* start_ptr;
-    char* end_ptr;
-    double* val;
-    list* datapoint;
-
-    start_ptr = datapoint_str;
-    end_ptr = start_ptr;
-
-    datapoint = create_list();
-
-    while(*end_ptr != 0) {
-        val = calloc(1, sizeof(double));
-        *val = strtod(start_ptr, &end_ptr);
-        add_to_list(datapoint, val);
-        start_ptr = end_ptr+1; /* to ignore the commas */
-    }
-    
-
-    return datapoint;
-}
-
-list* get_datapoints() {
-    list* datapoints_list;
-    list* datapoint;
-    char line[MAX_LINE_SIZE];
-    int input_status;
-    input_status = 0;
-    datapoints_list = create_list();
-
-    input_status = scanf("%s", line);
-    
-    while(input_status != EOF) {
-        datapoint = parse_datapoint(line);
-        add_to_list(datapoints_list, datapoint);
-        input_status = scanf("%s", line);
-    }
-
-    return datapoints_list;
-}
+/* ---------- Points printing functions ---------- */
 
 /*
- * pointer to the coordinates file, made for the following functions
+ * Prints a single point (given as a list)
  */
-typedef struct {
-    FILE* fp;
-    char last_char;
-} coordinates_file;
-
-/*
- * Create coordinates file given a filepath
- */
-coordinates_file* get_coordinates_file(char* filepath) {
-    coordinates_file* file;
-    file = malloc(sizeof(coordinates_file));
-    file->fp = fopen(filepath, "r+");
-    return file;
-}
-
-/*
- * Free the coordinates file
- */
-void free_coordinates_file(coordinates_file* coordinates_file) {
-    fclose(coordinates_file->fp);
-    free(coordinates_file);
-}
-
-/*
- * Read a single coordinate from the file (between commas)
- */
-double* read_coordinate(coordinates_file* file) {
-    double* coordinate;
-    bool fraction;
-    bool negative;
-    double divisor;
-    coordinate = malloc(sizeof(double));
-    *coordinate = 0;
-    negative = FALSE;
-    fraction = FALSE; 
-    divisor = 1;
-    while ((file->last_char != EOF) && (file->last_char != ',') && (file->last_char != '\n')) {
-        if (file->last_char == '.') {
-            fraction = TRUE;
-        } else if (file->last_char == '-') {
-            negative = TRUE;
-        } else if (!fraction) {
-            *coordinate *= 10;
-            *coordinate += (double)((file->last_char) - '0');
-        } else {
-            divisor *= 10;
-            *coordinate += ((double)((file->last_char) - '0')) / divisor;
-        }
-        file->last_char = fgetc(file->fp);
-    }
-    if (negative) {
-        *coordinate *= -1;
-    }
-    return coordinate;
-}
-
-/*
- * Read a point (entire line) from a file
- */
-list* read_point(coordinates_file* file) {
-    list* point;
-    point = create_list();
-    
-    do {
-        file->last_char = fgetc(file->fp);
-        if (file->last_char == EOF) {
-            return NULL;
-        }
-        add_to_list(point, read_coordinate(file));
-    } while ((file->last_char != EOF) && (file->last_char != '\n'));
-
-    return point;
-}
-
-/*
- * read all points from given path
- */
-list* read_points(char* path_to_datapoints) {
-    coordinates_file* file;
-    list* datapoints;
-    list* point;
-    int i;
-    datapoints = create_list();
-    file = get_coordinates_file(path_to_datapoints);
-    i=0;
-    while (file->last_char != EOF) {
-        i++;
-        point = read_point(file);
-        if (point != NULL) {
-            add_to_list(datapoints, point);
-        }
-    }
-    free_coordinates_file(file);
-    return datapoints;
-}
-
 void print_point(list* point) {
     node* curr_coordinate;
     double* coordinate;
@@ -362,8 +206,61 @@ void print_points(list* points) {
     }
 }
 
+/* ---------------READ INPUT--------------- */
+
+/*
+ * Parses a single data point from a string
+ */
+list* parse_datapoint(char* datapoint_str) {
+    char* start_ptr;
+    char* end_ptr;
+    double* val;
+    list* datapoint;
+
+    start_ptr = datapoint_str;
+    end_ptr = start_ptr;
+
+    datapoint = create_list();
+
+    while(*end_ptr != 0) {
+        val = calloc(1, sizeof(double));
+        *val = strtod(start_ptr, &end_ptr);
+        add_to_list(datapoint, val);
+        start_ptr = end_ptr+1; /* to ignore the commas */
+    }
+    
+
+    return datapoint;
+}
+
+/*
+ * Parses all datapoints from input
+ */
+list* get_datapoints() {
+    list* datapoints_list;
+    list* datapoint;
+    char line[MAX_LINE_SIZE];
+    int input_status;
+    input_status = 0;
+    datapoints_list = create_list();
+
+    input_status = scanf("%s", line);
+    
+    while(input_status != EOF) {
+        datapoint = parse_datapoint(line);
+        add_to_list(datapoints_list, datapoint);
+        input_status = scanf("%s", line);
+    }
+
+    return datapoints_list;
+}
+
+
 /* ---------------ALGORITHM--------------- */
 
+/*
+ * Print all k means
+ */
 void print_kmeans(list** kmeans, int k) {
     int i;
 
@@ -468,6 +365,9 @@ int choose_closest_mean(list* point, list** means, int k) {
     return closest_mean;
 }
 
+/*
+ * Update a specific mean point
+ */
 void update_mean(list* mean, list* point, int denominator, int d) {
     node* point_coordinate;
     node* mean_coordinate;
@@ -592,6 +492,9 @@ bool did_converge(list** points1, list** points2, int k, double l2_threshold) {
     }
 }
 
+/*
+ * The entire algorithm
+ */
 list** calc_k_means(list* data_points, int k, int N, int d, int max_iter, double l2_threshold) {
     list** former_kmeans;
     list** kmeans;
@@ -610,10 +513,9 @@ list** calc_k_means(list* data_points, int k, int N, int d, int max_iter, double
     return kmeans;
 }
 
-
-
-
-
+/*
+ * main function
+ */
 int main(int argc, char** argv) {
     int N;
     int d;
