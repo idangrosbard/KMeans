@@ -62,7 +62,7 @@ if len(args)==2:
 line = input()
 data = []
 while line!= None:
-    point_str = line[0:len(line)-1].split(',')
+    point_str = line[0:len(line)].split(',')
     point = [float(num) for num in point_str]
     data.append(point)
     try:
