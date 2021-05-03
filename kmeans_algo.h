@@ -1,7 +1,3 @@
-//
-// Created by Y on 4/21/2021.
-//
-
 #ifndef KMEANS_KMEANS_ALGO_H
 #define KMEANS_KMEANS_ALGO_H
 
@@ -46,4 +42,4 @@ double** calc_k_means_iter(double** data_points, double** former_k_means, int k,
 double l2_dist(double* point1, double* point2, int d);
 
 
-#endif //KMEANS_KMEANS_ALGO_H
+#endif

@@ -6,19 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/home/KMeans/kmeans_algo.h
-
-C:/home/KMeans/main.c
-stdio.h
--
-kmeans_algo.h
-C:/home/KMeans/kmeans_algo.h
-string.h
--
+C:/Users/Y/CLionProjects/KMeans/linked_list.c
+linked_list.h
+C:/Users/Y/CLionProjects/KMeans/linked_list.h
 stdlib.h
 -
-assert.h
+stdio.h
 -
-math.h
--
+
+C:/Users/Y/CLionProjects/KMeans/linked_list.h
 
