@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <assert.h>
 #define TRUE 1
@@ -27,6 +26,7 @@ typedef struct node {
  */
 node* create_node(void* val) {
     node* new_node = malloc(sizeof(node));
+    assert(new_node != NULL);
     new_node->next = NULL;
     new_node->val = val;
     return new_node;
@@ -63,6 +63,7 @@ void add_to_list(list* list, void* val) {
  */
 list* create_list() {
     list* l = malloc(sizeof(list));
+    assert(l != NULL);
     l->len = 0;
     l->first = NULL;
     return l;
@@ -80,6 +81,7 @@ list* copy_list(list* lst) {
     curr = lst->first;
     for (iter = 0; iter < lst->len; iter++) {
         val = malloc(sizeof(double));
+        assert(val != NULL);
         *val = *((double*)(curr->val));
         add_to_list(copy, val);
         curr = curr->next;
@@ -98,6 +100,7 @@ list* create_empty_list(unsigned long d) {
     copy = create_list();
     for (iter = 0; iter < d; iter++) {
         val = malloc(sizeof(double));
+        assert(val != NULL);
         *val = 0;
         add_to_list(copy, val);
     }
@@ -223,7 +226,8 @@ list* parse_datapoint(char* datapoint_str) {
     datapoint = create_list();
 
     while(*end_ptr != 0) {
-        val = calloc(1, sizeof(double));
+        val = malloc(sizeof(double));
+        assert(val != NULL);
         *val = strtod(start_ptr, &end_ptr);
         add_to_list(datapoint, val);
         start_ptr = end_ptr+1; /* to ignore the commas */
@@ -264,7 +268,6 @@ list* get_datapoints() {
 void print_kmeans(list** kmeans, int k) {
     int i;
 
-    printf("\n");
     for (i = 0; i < k; i++) {
         print_point(kmeans[i]);
         printf("\n");
@@ -280,7 +283,8 @@ list** initialize_kmeans(list* points, unsigned long k) {
     list* mean;
     unsigned long i;
 
-    kmeans = malloc(sizeof(list*) * k);
+    kmeans = calloc(k, sizeof(list*));
+    assert(kmeans != NULL);
     curr = points->first;
 
     for (i = 0; i < k; i++) {
@@ -300,8 +304,8 @@ list** initialize_empty_kmeans(unsigned long k, unsigned long d) {
     list* mean;
     unsigned long i;
 
-    kmeans = malloc(sizeof(list*) * k);
-
+    kmeans = calloc(k, sizeof(list*));
+    assert(kmeans != NULL);
     for (i = 0; i < k; i++) {
         mean = create_empty_list(d);
         kmeans[i] = mean;
@@ -436,8 +440,10 @@ list** calc_k_means_iter(list* data_points, list** means, int k, int N, int d) {
     int closest_mean_index;
     node* curr_point;
 
-    assigned_points = malloc(sizeof(list*) * k);
-    assigned_counts = malloc(sizeof(int) * k);
+    assigned_points = calloc(k, sizeof(list*));
+    assert(assigned_points != NULL);
+    assigned_counts = calloc(k, sizeof(int));
+    assert(assigned_counts != NULL);
 
     for (i = 0; i < k; i++) {
         assigned_points[i] = create_list();
@@ -537,6 +543,8 @@ int main(int argc, char** argv) {
     points = get_datapoints();
     N = (int)(points->len);
     d = (int)(((list*)(points->first->val))->len);
+
+    assert(k < N);
 
     kmeans = calc_k_means(points, k, N, d, max_iter, L2_THRESH);
     print_kmeans(kmeans, k);
