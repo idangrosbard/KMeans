@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import sys
-#from Ipython.display import display
+
 
 #Given A Matrix and centroid returns a vector of length from each point to center
 def calc_distance_single_centroid(matrix, centroid):
@@ -9,8 +9,6 @@ def calc_distance_single_centroid(matrix, centroid):
     temp_mat = np.square(temp_mat)
     dist = np.sum(temp_mat,axis=1)
     return dist
-
-
 
 #1st Stage: get parameters from command line
 args = sys.argv
@@ -36,7 +34,7 @@ matrix = df.to_numpy()
 
 #3rd Stage: Initiazlize some variables needed later
 np.random.seed(0)
-n,m = matrix.shape
+n, d = matrix.shape
 indices = []
 # dist [i,j] = l2 distance from point i to centroid j
 # every entry of the table is initialized to infinity (So min distance won't be affected)
@@ -55,4 +53,20 @@ for i in range (k):
     indices.append(centroid_index)
     centroid_index = np.random.choice(n,p=pr)
     centroid = matrix[centroid_index,:]
+
+#6th Stage: Rearange the data table so centroid found would be first
+
+#Firstly: insert the first k centroid found by the algorithn
+data = np.zeros((n,d))
+for i in range (k):
+    data[i,:] = matrix [indices[i],:]
+
+#Secondly: add all other points:
+insert_index = k  # a variable to store the current place to insert a point
+for j in range (n):
+    if (j not in indices):
+        data[insert_index,:] = matrix [j,:]
+        insert_index +=1
+
+
 
