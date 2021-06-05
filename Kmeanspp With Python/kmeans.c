@@ -28,14 +28,10 @@ static List copy_list(List* list);
 //Appends at the end a given double to a list of doubles
 static void append_double(List* list,double number);
 //append a given char to end of word
-static void append_char (List* list , char c);
-//returns the size of an element in the list;
 static int size_of_type(Type type);
 //Prints the list
 static void print_list(List* list);
 
-// gets a list representing a number in decimal representaion and returns it's double representation
-static double string_to_double(List* word);
 //Calculate l2 distance between two given points
 static double calc_dist(List* point1, List* point2);
 //return the index of the closest centroid relative to l2 distance
@@ -117,24 +113,6 @@ static void append_list(List* list, struct List point){
 
 }
 
-static void append_char (List* list , char c){
-    assert(list->type==String);
-    char* array_pointer = (char *) list->array;
-    if (list->max_size==list->len){
-        char* new_array = calloc(list->max_size*2,size_of_type(list->type));
-        int i;
-        for (i=0;i<list->len;i++){
-            new_array[i] = array_pointer[i];
-            assert (new_array!=NULL);
-        }
-        free (list->array);
-        list->array = (void*) new_array;
-        list->max_size = (list->max_size)*2;
-    }
-    array_pointer = (char*) list->array;
-    array_pointer[list->len]=c;
-    list->len= list->len+1;
-}
 
 static void print_list(List* list){
     if (list->len==0){
@@ -164,19 +142,6 @@ static void print_list(List* list){
         }
     }
     return;
-}
-
-static double string_to_double(List* word){
-    char* new_word = calloc(word->len,sizeof(char));
-    assert(new_word!=NULL);
-    int i;
-    for (i=0; i<word->len;i++){
-        new_word[i]=((char*)word->array)[i];
-    }
-    char *ptr;
-    double number = strtod(new_word,&ptr);
-    free (new_word);
-    return number;
 }
 
 static List copy_list(List* list){
@@ -287,7 +252,6 @@ static void fit (int k , int max_iter , int d, int n, List* points){
     int* count_for_centroid = calloc(k,sizeof(int));
     int iter;
     int point_index;
-    int i;
     int j;
     for (iter=0; iter<max_iter; iter++){
         for (point_index =0; point_index<points->len;point_index++){
