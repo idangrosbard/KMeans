@@ -27,12 +27,13 @@ for k in range(1, 11):
 x = [k for k in range (1,11)]
 dif , elbow = plt.subplots()
 
-line = elbow.plot(x,y)
-elbow.annotate('Elbow Point', xy=(1, 1),
-                xytext=(1, 1),
-                arrowprops=dict(facecolor='black',
-                                shrink=0.05), )
+fig, ax = plt.subplots()
 
-elbow.set_ylim(-2, 2)
-plt.show()
-#plt.savefig("elbow.png")
+ax.set_title("Elbow Method For Selection of Optimal K Clusters",color = "orange")
+ax.set (xlabel= "Number Of Clusters", ylabel = "Interna")
+ax.title.color = "orange"
+ax.plot(x,y)
+ax.scatter(3,y[2],s=1000, facecolors='none', edgecolors='k',linestyle="--")
+ax.annotate('Elbow Point', xy=(3, y[2]), xytext=(5, 150),
+            arrowprops=dict(arrowstyle="->",linestyle='--'))
+plt.savefig("elbow.png")
