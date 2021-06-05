@@ -23,14 +23,10 @@ typedef struct List{
 static List init_list(int max_size, Type type);
 //Frees the space allocated to list
 static void free_list(List* list);
-//frees the previous space and reinitialize
-static List re_init_list(List *list,int max_size, Type type);
 //copies a given list into another copy with exacts same values
 static List copy_list(List* list);
 //Appends at the end a given double to a list of doubles
 static void append_double(List* list,double number);
-//append a given pointer to a list to the and of list of pointers
-static void append_point(List* list, List* point);
 //append a given char to end of word
 static void append_char (List* list , char c);
 //returns the size of an element in the list;
@@ -80,18 +76,14 @@ static void free_list(List* list){
     free (list->array);
 }
 
-static List re_init_list(List* list,int max_size, Type type){
-    free_list(list);
-    return init_list(max_size,type);
-}
-
 static void append_double(List* list,double number){
     assert(list->type==Doubles);
     double* array_pointer = (double*) list->array;
     if (list->max_size==list->len){
         double* new_array = calloc(list->max_size*2,size_of_type(list->type));
         assert (new_array!=NULL);
-        for (int i=0;i<list->len;i++){
+        int i;
+        for (i=0;i<list->len;i++){
             new_array[i] = array_pointer[i];
         }
         free (list->array);
@@ -103,24 +95,7 @@ static void append_double(List* list,double number){
     list->len= list->len+1;
 }
 
-static void append_point(List* list, List* point){
-    assert(list->type==Points);
-    List** array_pointer = (List**) list->array;
-    if (list->max_size==list->len){
-        List** new_array = calloc(list->max_size*2,sizeof(List**));
-        assert (new_array!=NULL);
-        for (int i=0;i<list->len;i++){
-            new_array[i] = array_pointer[i];
-        }
-        free (list->array);
-        list->array = (void*) new_array;
-        list->max_size = (list->max_size)*2;
-    }
-    array_pointer = (List**) list->array;
-    array_pointer[list->len]=point;
-    list->len= list->len+1;
 
-}
 
 static void append_list(List* list, struct List point){
     assert(list->type==Lists);
@@ -128,7 +103,8 @@ static void append_list(List* list, struct List point){
     if (list->max_size==list->len){
         List* new_array = calloc(list->max_size*2,size_of_type(list->type));
         assert (new_array!=NULL);
-        for (int i=0;i<list->len;i++){
+        int i;
+        for (i=0;i<list->len;i++){
             new_array[i] = array_pointer[i];
         }
         free (list->array);
@@ -146,7 +122,8 @@ static void append_char (List* list , char c){
     char* array_pointer = (char *) list->array;
     if (list->max_size==list->len){
         char* new_array = calloc(list->max_size*2,size_of_type(list->type));
-        for (int i=0;i<list->len;i++){
+        int i;
+        for (i=0;i<list->len;i++){
             new_array[i] = array_pointer[i];
             assert (new_array!=NULL);
         }
@@ -164,21 +141,24 @@ static void print_list(List* list){
         return;
     }
     if (list->type==Doubles){
-        for (int i=0;i<(list->len)-1;i++){
+        int i;
+        for (i=0;i<(list->len)-1;i++){
             printf("%.4f,", ((double*)list->array)[i]);
         }
         printf ("%.4f\n", ((double*)list->array)[list->len-1]);
     }
     if (list->type==Points){
         List* pointer;
-        for (int i=0; i<list->len;i++){
+        int i;
+        for (i=0; i<list->len;i++){
             pointer = (List*)((List**)list->array)[i];
             print_list(pointer);
         }
     }
     if (list->type==Lists){
         List* pointer;
-        for (int i=0; i<list->len;i++){
+        int i;
+        for (i=0; i<list->len;i++){
             pointer = &((List*)list->array)[i];
             print_list(pointer);
         }
@@ -189,7 +169,8 @@ static void print_list(List* list){
 static double string_to_double(List* word){
     char* new_word = calloc(word->len,sizeof(char));
     assert(new_word!=NULL);
-    for (int i=0; i<word->len;i++){
+    int i;
+    for (i=0; i<word->len;i++){
         new_word[i]=((char*)word->array)[i];
     }
     char *ptr;
@@ -205,7 +186,8 @@ static List copy_list(List* list){
     new_list.max_size = list->max_size;
     double* array_pointer = (double *)list->array;
     double * temp_array = calloc(list->len,sizeof(double ));
-    for (int i=0; i<list->len;i++){
+    int i;
+    for (i=0; i<list->len;i++){
         temp_array[i] = array_pointer[i];
     }
     new_list.array = temp_array;
@@ -218,10 +200,11 @@ static double calc_dist(List* point1, List* point2){
     double* pointer2 = (double*) point2->array;
     double num1;
     double num2;
-    for (int i=0; i<point1->len;i++){
+    int i;
+    for (i=0; i<point1->len;i++){
         num1 = pointer1[i];
         num2 = pointer2[i];
-        sum += pow(pointer1[i]-pointer2[i],2);
+        sum += pow(num1-num2,2);
     }
     return sum;
 }
@@ -232,7 +215,8 @@ static int closest_centroid(List* point, List* centroids){
     List centroid = ((List*)centroids->array)[0];
     double min_dist = calc_dist(point,&centroid);
     double tmp_dst;
-    for (int i=0;i<centroids->len;i++){
+    int i;
+    for (i=0;i<centroids->len;i++){
         centroid = ((List*)centroids->array)[i];
         tmp_dst= calc_dist(point,&centroid);
         if (tmp_dst<min_dist){
@@ -245,7 +229,8 @@ static int closest_centroid(List* point, List* centroids){
 
 static void add_vector_to_centroid (List* centroids, int centroid_index, List* point) {
     List centroid = ((List*) (centroids->array))[centroid_index];
-    for (int i=0; i<point->len;i++){
+    int i;
+    for (i=0; i<point->len;i++){
         ((double*)centroid.array)[i] += ((double*) point->array)[i];
     }
 }
@@ -253,9 +238,11 @@ static void add_vector_to_centroid (List* centroids, int centroid_index, List* p
 static List create_blank_temp_centroids(int k, int d){
     List new_centroids = init_list(k,Lists);
     List point;
-    for (int i=0; i<k;i++) {
+    int i;
+    int j;
+    for (i=0; i<k;i++) {
         point = init_list(d, Doubles);
-        for (int j = 0; j < d; j++) {
+        for (j = 0; j < d; j++) {
             append_double(&point,0);
         }
         append_list(&new_centroids, point);
@@ -269,10 +256,12 @@ static int compare_centroids(List* old_centroids, List* new_centroids){
     List centroid2;
     double num1=0;
     double num2=0;
-    for (int i=0;i<old_centroids->len;i++) {
+    int i;
+    int j;
+    for (i=0;i<old_centroids->len;i++) {
         centroid1 = ((List *) old_centroids->array)[i];
         centroid2 = ((List*) new_centroids->array)[i];
-        for (int j=0;j<old_centroids->len;j++){
+        for (j=0;j<old_centroids->len;j++){
             num1 = ((double *)centroid1.array)[j];
             num2 = ((double *)centroid2.array)[j];
             if (num1!=num2){
@@ -287,7 +276,8 @@ static int compare_centroids(List* old_centroids, List* new_centroids){
 static void fit (int k , int max_iter , int d, int n, List* points){
     List centroids = init_list(k,Lists);
     List point;
-    for (int i=0;i<k;i++){
+    int i;
+    for (i=0;i<k;i++){
         point = ((List*)(points->array))[i];
         append_list(&centroids,copy_list(&point));
     }
@@ -295,16 +285,20 @@ static void fit (int k , int max_iter , int d, int n, List* points){
     int closest_centroid_idx;
     List temp_centroids = create_blank_temp_centroids(k,d);
     int* count_for_centroid = calloc(k,sizeof(int));
-    for (int iter=0; iter<max_iter; iter++){
-        for (int point_index =0; point_index<points->len;point_index++){
+    int iter;
+    int point_index;
+    int i;
+    int j;
+    for (iter=0; iter<max_iter; iter++){
+        for (point_index =0; point_index<points->len;point_index++){
             point = ((List*)(points->array))[point_index];
             closest_centroid_idx = closest_centroid(&point, &centroids);
             count_for_centroid[closest_centroid_idx]++ ;
             add_vector_to_centroid(&temp_centroids,closest_centroid_idx,&point);
         }
-        for (int i=0; i<temp_centroids.len;i++){
+        for (i=0; i<temp_centroids.len;i++){
             List centroid = ((List*)temp_centroids.array)[i];
-            for (int j=0;j<centroid.len;j++){
+            for (j=0;j<centroid.len;j++){
                 ((double*) (centroid.array))[j]/= count_for_centroid[i];
             }
         }
@@ -334,10 +328,12 @@ static List pyList_to_myList(PyObject* data, int n, int d){
     PyObject* point;
     List my_point;
     List my_data = init_list(n,Lists);
-    for (int i=0; i<n; i++){
+    int i;
+    int j;
+    for (i=0; i<n; i++){
         point =  PyList_GetItem(data ,i);
         my_point = init_list(d,Doubles);
-        for (int j=0; j<d; j++){
+        for (j=0; j<d; j++){
             append_double(&my_point, PyFloat_AsDouble(PyList_GetItem(point,j)));
         }
         append_list(&my_data,my_point);
