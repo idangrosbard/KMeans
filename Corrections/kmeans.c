@@ -29,8 +29,6 @@ static List copy_list(List* list);
 static void append_double(List* list,double number);
 //append a given char to end of word
 static int size_of_type(Type type);
-//Prints the list
-static void print_list(List* list);
 
 //Calculate l2 distance between two given points
 static double calc_dist(List* point1, List* point2);
@@ -114,35 +112,6 @@ static void append_list(List* list, struct List point){
 }
 
 
-static void print_list(List* list){
-    if (list->len==0){
-        return;
-    }
-    if (list->type==Doubles){
-        int i;
-        for (i=0;i<(list->len)-1;i++){
-            printf("%.4f,", ((double*)list->array)[i]);
-        }
-        printf ("%.4f\n", ((double*)list->array)[list->len-1]);
-    }
-    if (list->type==Points){
-        List* pointer;
-        int i;
-        for (i=0; i<list->len;i++){
-            pointer = (List*)((List**)list->array)[i];
-            print_list(pointer);
-        }
-    }
-    if (list->type==Lists){
-        List* pointer;
-        int i;
-        for (i=0; i<list->len;i++){
-            pointer = &((List*)list->array)[i];
-            print_list(pointer);
-        }
-    }
-    return;
-}
 
 static List copy_list(List* list){
     List new_list;
