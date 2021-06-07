@@ -84,10 +84,7 @@ for j in range(n):
         insert_index += 1
 
 # 7th Stage: Print Indices in Format
-for i in range(len(indices) - 1):
-    print(indices[i], end=',')
-print(indices[-1])
-
+print_point(indices,integer=True)
 # 8th Stage: Compute Centroids using kmeans algorithm in C
 centroids = k_means.fit(k, max_iter, n, d, data.tolist())
 
