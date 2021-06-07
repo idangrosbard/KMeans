@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Corrections"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Corrections">
+				<Option output="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Corrections.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes"/>
+					<Add directory="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython"/>
+					<Add directory="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 Corrections"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Corrections/fast">
+				<Option output="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Corrections.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes"/>
+					<Add directory="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython"/>
+					<Add directory="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 Corrections/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/Python-ast.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/Python.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/abstract.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/asdl.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/ast.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/bitset.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/bltinmodule.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/boolobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/bytearrayobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/bytes_methods.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/bytesobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cellobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/ceval.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/classobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/code.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/codecs.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/compile.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/complexobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/context.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/abstract.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/dictobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/fileobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/initconfig.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/interpreteridobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/object.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/objimpl.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/pyerrors.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/pylifecycle.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/pymem.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/pystate.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/sysmodule.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/traceback.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/tupleobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/cpython/unicodeobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/datetime.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/descrobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/dictobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/dtoa.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/dynamic_annotations.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/enumobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/errcode.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/eval.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/fileobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/fileutils.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/floatobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/frameobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/funcobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/genobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/graminit.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/grammar.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/import.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_accu.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_atomic.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_ceval.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_code.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_condvar.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_context.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_fileutils.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_getopt.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_gil.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_hamt.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_initconfig.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_object.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_pathconfig.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_pyerrors.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_pyhash.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_pylifecycle.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_pymem.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_pystate.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_traceback.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_tupleobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/internal/pycore_warnings.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/interpreteridobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/intrcheck.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/iterobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/listobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/longintrepr.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/longobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/marshal.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/memoryobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/methodobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/modsupport.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/moduleobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/namespaceobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/node.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/object.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/objimpl.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/odictobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/opcode.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/osdefs.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/osmodule.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/parsetok.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/patchlevel.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/picklebufobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/py_curses.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pyarena.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pycapsule.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pyconfig.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pyctype.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pydebug.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pydtrace.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pyerrors.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pyexpat.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pyfpe.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pyhash.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pylifecycle.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pymacconfig.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pymacro.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pymath.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pymem.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pyport.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pystate.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pystrcmp.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pystrhex.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pystrtod.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pythonrun.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pythread.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/pytime.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/rangeobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/setobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/sliceobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/structmember.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/structseq.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/symtable.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/sysmodule.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/token.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/traceback.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/tracemalloc.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/tupleobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/typeslots.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/ucnhash.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/unicodeobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/warnings.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/includes/weakrefobject.h">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/kmeans.c">
+			<Option target="Corrections"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

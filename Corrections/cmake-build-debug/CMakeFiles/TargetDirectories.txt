@@ -1,0 +1,3 @@
+C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/CMakeFiles/Corrections.dir
+C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Tomer/CLionProjects/kmeans-git/KMeans/Corrections/cmake-build-debug/CMakeFiles/rebuild_cache.dir

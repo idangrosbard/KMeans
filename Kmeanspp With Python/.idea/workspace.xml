@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="999d5fca-3afd-4eba-82aa-78c0fe7a4736" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bonus.py" beforeDir="false" afterPath="$PROJECT_DIR$/bonus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input_3.txt" beforeDir="false" />
+    <list default="true" id="b73ceb07-fabd-467d-a30c-788183de5010" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="JupyterTrust" id="7604b465-1a73-4f93-9963-f45e8ff514b5" />
-  <component name="ProjectId" id="1tWIFBlVLrLFSvLh6aK5dASiHrs" />
+  <component name="ProjectId" id="1tWk375azG5RFnQvfKVsiWQEyo4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,142 +28,42 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="Kmeanspp With Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="bonus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Kmeanspp With Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bonus.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.bonus" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="999d5fca-3afd-4eba-82aa-78c0fe7a4736" name="Default Changelist" comment="" />
-      <created>1622878314573</created>
+      <changelist id="b73ceb07-fabd-467d-a30c-788183de5010" name="Default Changelist" comment="" />
+      <created>1622892033870</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1622878314573</updated>
-      <workItem from="1622878316107" duration="5298000" />
-      <workItem from="1622889739320" duration="843000" />
+      <updated>1622892033870</updated>
+      <workItem from="1622892037792" duration="742000" />
+      <workItem from="1623073133249" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state width="1281" height="170" key="GridCell.Tab.0.bottom" timestamp="1622894464805">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1921" height="170" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1622883046972" />
-    <state width="1281" height="170" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622879295608" />
-    <state width="1281" height="170" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622894464805" />
-    <state width="1281" height="170" key="GridCell.Tab.0.center" timestamp="1622894464805">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1921" height="170" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1622883046972" />
-    <state width="1281" height="170" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622879295608" />
-    <state width="1281" height="170" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622894464805" />
-    <state width="1281" height="170" key="GridCell.Tab.0.left" timestamp="1622894464805">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1921" height="170" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1622883046972" />
-    <state width="1281" height="170" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622879295608" />
-    <state width="1281" height="170" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622894464805" />
-    <state width="1281" height="170" key="GridCell.Tab.0.right" timestamp="1622894464805">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1921" height="170" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1622883046972" />
-    <state width="1281" height="170" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622879295608" />
-    <state width="1281" height="170" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622894464805" />
-    <state width="1921" height="356" key="GridCell.Tab.1.bottom" timestamp="1622889625927">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1622882099515" />
-    <state width="1281" height="213" key="GridCell.Tab.1.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622879272259" />
-    <state width="1921" height="356" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622889625927" />
-    <state width="1921" height="356" key="GridCell.Tab.1.center" timestamp="1622889625927">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1622882099515" />
-    <state width="1281" height="213" key="GridCell.Tab.1.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622879272259" />
-    <state width="1921" height="356" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1622889625927" />
-    <state width="1921" height="356" key="GridCell.Tab.1.left" timestamp="1622889625927">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1622882099515" />
-    <state width="1281" height="213" key="GridCell.Tab.1.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622879272259" />
-    <state width="1921" height="356" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1622889625927" />
-    <state width="1921" height="356" key="GridCell.Tab.1.right" timestamp="1622889625927">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1622882099515" />
-    <state width="1281" height="213" key="GridCell.Tab.1.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622879272259" />
-    <state width="1921" height="356" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1622889625927" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1622878439648">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622878439648" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1622894347150">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1622894347150" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Kmeanspp_With_Python$bonus.coverage" NAME="bonus Coverage Results" MODIFIED="1622883046963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bonus_py$bonus.coverage" NAME="bonus Coverage Results" MODIFIED="1622894454341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
