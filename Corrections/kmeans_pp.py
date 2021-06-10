@@ -12,17 +12,11 @@ def calc_distance_single_centroid(matrix, centroid):
     return dist
 
 
-def print_point(point, integer=False):
+def print_point(point):
     """ Given a Point prints it in format """
     for i in range(len(point) - 1):
-        if (integer):
-            print(point[i], end=',')
-        else:
-            print(format(point[i], '.4f'), end=',')
-    if (integer):
-        print(point[-1])
-    else:
-        print(format(point[-1], '.4f'))
+        print(point[i], end=',')
+    print(point[-1])
 
 
 # 1st Stage: get parameters from command line
@@ -44,12 +38,15 @@ df2 = pd.read_csv(file_path2, header=None)
 
 df = pd.merge(df1, df2, on=0, how='inner')
 df = df.sort_values(0)
+original_indices = df[0].to_list()
+original_indices = [int(index) for index in original_indices]
 df = df.iloc[:, 1:]
 matrix = df.to_numpy()
-
-# 3rd Stage: Initiazlize some variables needed later
+# 3rd Stage: Initialize some variables needed later
 np.random.seed(0)
 n, d = matrix.shape
+
+assert(k<n and max_iter>=0)
 indices = []
 # dist [i,j] = l2 distance from point i to centroid j
 # every entry of the table is initialized to infinity (So min distance won't be affected)
@@ -66,7 +63,7 @@ for i in range(k):
     total_dist = np.sum(min_dist)
     pr = min_dist / total_dist
     indices.append(centroid_index)
-    centroid_index = np.random.choice(n, p=pr)
+    centroid_index = original_indices[np.random.choice(n, p=pr)]
     centroid = matrix[centroid_index, :]
 
 # 6th Stage: Rearrange the data table so centroid found would be first
@@ -84,10 +81,11 @@ for j in range(n):
         insert_index += 1
 
 # 7th Stage: Print Indices in Format
-print_point(indices,integer=True)
+print_point(indices)
 # 8th Stage: Compute Centroids using kmeans algorithm in C
 centroids = k_means.fit(k, max_iter, n, d, data.tolist())
 
 # 9th Stage: print Centroids
+centroids = np.round(centroids, 4)
 for centroid in centroids:
     print_point(centroid)
