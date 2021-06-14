@@ -67,6 +67,14 @@ static List init_list(int max_size, Type type){
 }
 
 static void free_list(List* list){
+    if (list->type==Lists){
+        int i;
+        List point;
+        for (i=0;i<list->len;i++){
+            point = ((List*)(list->array))[i];
+            free_list(&point);
+        }
+    }
     free (list->array);
 }
 
@@ -299,6 +307,7 @@ static PyObject* kmeans(PyObject *self, PyObject *args){
     int max_iter;
     int n;
     int d;
+    List data;
     List centroids;
     PyObject* Pydata;
     /* This parses the Python arguments into a double (d)  variable named z and int (i) variable named n*/
@@ -308,12 +317,14 @@ static PyObject* kmeans(PyObject *self, PyObject *args){
 
     }
     else{
-        List data = pyList_to_myList(Pydata,n,d);
+        data = pyList_to_myList(Pydata,n,d);
         centroids = fit(k,max_iter,d,n,&data);
 
     }
 /* This builds the answer ("d" = Convert a C double to a Python floating point number) back into a python object */
     Pydata = myList_to_Pylist(&centroids,k,d);
+    free_list(&centroids);
+    free_list(&data);
     return Py_BuildValue("O", Pydata); /*  Py_BuildValue(...) returns a PyObject*  */
 }
 
