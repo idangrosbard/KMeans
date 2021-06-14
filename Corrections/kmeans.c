@@ -252,7 +252,8 @@ static List fit (int k , int max_iter , int d, int n, List* points){
         free (count_for_centroid);
         count_for_centroid = calloc(k,sizeof(int));
     }
-
+    free(count_for_centroid);
+    free_list(&temp_centroids);
     return centroids;
 }
 
