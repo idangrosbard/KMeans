@@ -61,6 +61,7 @@ static List init_list(int max_size, Type type){
     list.len=0;
     list.max_size = max_size;
     list.array = calloc(max_size,size_of_type(type));
+    assert(list.array!=NULL);
     list.type = type;
     return list;
 
@@ -128,6 +129,7 @@ static List copy_list(List* list){
     new_list.max_size = list->max_size;
     double* array_pointer = (double *)list->array;
     double * temp_array = calloc(list->len,sizeof(double ));
+    assert(temp_array!=NULL);
     int i;
     for (i=0; i<list->len;i++){
         temp_array[i] = array_pointer[i];
@@ -227,6 +229,7 @@ static List fit (int k , int max_iter , int d, int n, List* points){
     int closest_centroid_idx;
     List temp_centroids = create_blank_temp_centroids(k,d);
     int* count_for_centroid = calloc(k,sizeof(int));
+    assert(count_for_centroid!=NULL);
     int iter;
     int point_index;
     int j;
@@ -249,8 +252,9 @@ static List fit (int k , int max_iter , int d, int n, List* points){
         free_list(&centroids);
         centroids= temp_centroids;
         temp_centroids = create_blank_temp_centroids(k,d);
-        free (count_for_centroid);
-        count_for_centroid = calloc(k,sizeof(int));
+        for (i=0;i<k;i++){
+            count_for_centroid[i]=0;
+        }
     }
     free(count_for_centroid);
     free_list(&temp_centroids);
